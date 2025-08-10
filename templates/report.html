@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<head><title>Report</title></head>
+<body>
+<h1>Monthly Report - {{ month }}/{{ year }}</h1>
+{% for r in report %}
+  <p>{{ r.employee_name }} — Present: {{ r.present_days }} Absent: {{ r.absent_days }} Leave: {{ r.leave_days }}</p>
+{% endfor %}
+</body>
+</html>
