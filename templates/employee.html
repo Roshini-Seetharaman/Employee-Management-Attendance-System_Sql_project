@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head><title>{{ emp.first_name }} {{ emp.last_name }}</title></head>
+<body>
+<h1>{{ emp.first_name }} {{ emp.last_name }}</h1>
+<p>Email: {{ emp.email }}</p>
+<p>Department: {{ emp.dept_id }} Role: {{ emp.role_id }}</p>
+
+<h2>Mark Attendance</h2>
+<form method="post" action="{{ url_for('mark_attendance') }}">
+  <input type="hidden" name="emp_id" value="{{ emp.emp_id }}">
+  <input type="date" name="att_date" value="{{ (None) }}">
+  <input type="time" name="check_in">
+  <input type="time" name="check_out">
+  <select name="status">
+    <option>Present</option>
+    <option>Absent</option>
+    <option>On Leave</option>
+    <option>Half Day</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+
+<h2>Recent Attendance</h2>
+<ul>
+  {% for a in attendance %}
+    <li>{{ a.att_date }} — {{ a.status }} ({{ a.check_in or '-' }} to {{ a.check_out or '-' }})</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
