@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head><title>Add Employee</title></head>
+<body>
+<h1>Add Employee</h1>
+<form method="post">
+  <input name="first_name" placeholder="First name" required><br>
+  <input name="last_name" placeholder="Last name"><br>
+  <input name="email" placeholder="Email" required><br>
+  <input name="phone" placeholder="Phone"><br>
+  <select name="dept_id">
+    {% for d in depts %}
+      <option value="{{ d.dept_id }}">{{ d.name }}</option>
+    {% endfor %}
+  </select><br>
+  <select name="role_id">
+    {% for r in roles %}
+      <option value="{{ r.role_id }}">{{ r.title }}</option>
+    {% endfor %}
+  </select><br>
+  <input name="date_of_joining" type="date"><br>
+  <button type="submit">Add</button>
+</form>
+</body>
+</html>
