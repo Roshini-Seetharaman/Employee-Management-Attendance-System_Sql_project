@@ -14,3 +14,10 @@ This SQL-based Inventory &amp; Sales Management System streamlines product track
    SOURCE schema.sql;
    SOURCE sample_data.sql;
    SOURCE procedures.sql;
+
+
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+
+python app.py
