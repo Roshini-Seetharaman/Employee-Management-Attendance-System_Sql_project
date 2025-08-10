@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><title>Employees</title></head>
+<body>
+<h1>Employees</h1>
+<a href="{{ url_for('add_employee') }}">Add Employee</a>
+<ul>
+  {% for e in employees %}
+    <li><a href="{{ url_for('employee_detail', emp_id=e.emp_id) }}">{{ e.first_name }} {{ e.last_name }}</a> — {{ e.email }}</li>
+  {% endfor %}
+</ul>
+</body>
+</html>
