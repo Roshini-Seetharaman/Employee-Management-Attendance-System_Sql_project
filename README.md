@@ -10,12 +10,12 @@ A complete MySQL-based Employee Management & Attendance System demonstrating cor
 
 ## Key Highlights
 This project covers real-world SQL features expected in industry:
-✔ Schema design (1NF–3NF)  
-✔ Sample data for demo  
-✔ Stored procedures for business logic  
-✔ Views for quick reporting  
-✔ Trigger-based validation  
-✔ MySQL + Python integration  
+1. Schema design (1NF–3NF) 
+2. Sample data for demo  
+3. Stored procedures for business logic  
+4. Views for quick reporting  
+5. Trigger-based validation  
+6. MySQL + Python integration  
 
 ---
 
