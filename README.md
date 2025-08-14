@@ -35,3 +35,13 @@ python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python app.py
+
+How to Use
+
+Open the Flask app in your browser (default: http://127.0.0.1:5000/)
+
+Add employees via the form
+
+Mark attendance for employees
+
+View monthly reports and salary register
